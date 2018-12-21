@@ -59,11 +59,11 @@ Also, and more important, make sure that your user profile allowing you to deplo
 #### Prepare Source Code
 The source code is stored in a remote repository at <i>github</i>, and the simplest way to prepare the source code on your deployment platform is to use <i>git</i> to clone the source code and its file structure. Or you may manually copy files of the source code form <i>github</i> to your deployment platform.
 
-To clone the source code, making sure that you have <i>git</i> installed; if not, following the general instructions found on the internet for the installtion; and then, execute a command below to clone the source code:
+To clone the source code, making sure that you have <i>git</i> installed; if not, following the general instructions found on the internet for the installtion. Then, execute a command below to clone the source code:
 ```
 git clone https://github.com/stelligent/miniproject-ZHENG-JAMES
 ```
-To manually prepare the source code instead of the clone, copy the files of the source code from the respository and make sure that all the files fall into a file structure below listed below, same as that in <i>github</i>:
+To manually prepare the source code instead of the clone, copy the files of the source code from the respository and make sure that all the files fall into a file structure exactly as it listed below, same as that in <i>github</i>:
 ```
 README.md
 mini
@@ -87,7 +87,7 @@ If the <i>aws cli</i> default user profile is different from yours, append your 
 ```
 serverless deploy --aws-profile jz-aws-user
 ```
-Upon the successful deployment, you screen should have some information displayed, like this:
+Upon the successful deployment, you screen should have part of the information displayed, like this:
 ```
 ..............................
 Serverless: Stack update finished...
@@ -105,6 +105,8 @@ functions:
 layers:
    None
 ```
+Notice the URL listed under <b>endpoints</b>; that is the URL - the RESTful API to be sent as the service request for the message and the current time.
+
 ## Test and Run Service
 To test and run the service on LINUX operating systems, there are 2 basic types of test methods we can use immediately after the deployment: testing in <b>serverless</b> and testing in <b>curl</b>.
 
@@ -121,9 +123,7 @@ Testing in <b>curl</b>, execute a command:
 curl -i -X GET https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini
 ```
 <b>NOTE:</b>
-The first part of the URL observed above, <i>17j9kelj04</i>, is a RESTful API identification. Your deployment should have that part different from the one contained above. 
-
-To get the URL containing the your RESTful API identification, referrer to the entry listed under <i><b>endpoints</b></i> from the information displayed on your screen after the successful deployment, described in section <b>Deploy Service to AWS</b>.
+The first part of the URL observed above, <i>17j9kelj04</i>, is a RESTful API identification. Your deployment should have that part created differently from the one contained above as decribed previously. 
 
 The service runs when it receives the URL as the service request, and then the service hosted by API gateway will forward the request to a function that further triggers off a logic process capturing the current time and creating the message as the result back for the user.
 
