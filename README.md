@@ -10,10 +10,15 @@ And the result will be:
 {"message": "Automation for the People", "timestamp": "1545375371"}
 ```
 The service mention above from the deliverable is so called Web Services or RESTful API, and the time displayed is in a format of UNIX timestmap.<br /><br />
-For a quick view of the project deliverable and try the service, click <a href="https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini" target="_blank" title="A quick view to the project deliverable at AWS">here</a>. Or, copy and paste the url displayed above to your browser's URL input box.<br /><br />
+<b>A quick test</b> for the service, is to click <a href="https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini" target="_blank" title="A quick view to the project deliverable at AWS">here</a>, or copy and paste the url displayed above to your browser's URL input box.<br /><br />
 The rest of this document, README.md, will be more technology oriented; it provides further information on the project deployment, testing, and some software artifacts in the project design and implementation that make the service available, including instructions to cleanup the running platform on AWS.<br /><br />
 The document divides its content into following sections:
-* Deploy the service to AWS
-* Test and Run the service
+* Deploy the Service to AWS
+* Test and Run the Service
 * Cleanup the Service from AWS
 ## Deploy the Service to AWS
+sd  afs
+fasf 
+asfsad 
+asf 
+ as
