@@ -11,17 +11,17 @@ And the request above yields a result that looks like this below:
 ```
 {"message": "Automation for the People", "timestamp": "1545375371"}
 ```
-The time displayed is in a format of UNIX timestamp.
+The time displayed above is in a format of UNIX timestamp.
 
-Simply, the service obtained by sending a request in a URL is so called Web Services or little more technical, a RESTful API.
+Simply, a service that can be obtained in a URL request is so called Web Services or little more technical, a RESTful API.
 
 ### Quick Test
-For a quick test for the service, click <a href="https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini" target="_blank" title="A quick view to the project deliverable at AWS">here</a>, or copy and paste the URL displayed above to your browser's URL input box.
+For a quick test for the service created by the mini project, click <a href="https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini" target="_blank" title="A quick view to the project deliverable at AWS">here</a>, or copy and paste the URL displayed above to your browser's URL input box.
 
 ### Further Information
-Further information in this document, README.md, will be more technology oriented; it will provide instructional information of the project deployment, testing, and how some software artifacts help to run the service, including instructions to cleanup the service from AWS' running environment in terms of uninstalling the service.
+Further information in this document, README.md, will be more technology oriented; it will provide instructional information of the project deployment, testing, and how some software artifacts help to run the service. It also includes instructions to cleanup the service from AWS' running environment, or uninstall the service from AWS.
 
-The document divides its content into following sections:
+The document divides its further content into following sections:
 * <b>Deploy Service to AWS</b>
 * <b>Test and Run Service</b>
 * <b>Cleanup Service from AWS</b>
@@ -29,15 +29,19 @@ The document divides its content into following sections:
 The project is designed and implemented in Python scripting language.
 
 ## Deploy Service to AWS
-The service deployment is in a single command line execution to launch the environment deployed on AWS; execute a command listed below to start the deployment after all prerequisites installed on your deployment platform:
+The service deployment is in a single command line execution. The command will launch the environment on AWS with all the necessary infrastructures provisioned automatically.
+
+After all prerequisites installed on your deployment platform, executing a single deployment command below to kick off the deployment process:
 ```
 serverless deploy
 ```
-The prerequisites include a framework named <b>serverless</b> that automates the whole deployment process including packaging the source code and provisioning the necessary infrastructures on AWS.
+<b>* DO NOT</b> execute the deployment command above now until all prerequsites satisfied on your local computer - the deployment platform.
 
-Follow steps below to install the prerequisites of the frameworks and the source code:
+The prerequisites include a framework named <b>serverless</b> that automates the deployment process by packaging the source code and uploads it to AWS for further provisioning the infrastructures and the service.
+
+Follow steps below to install the prerequisites of the frameworks and the source code before executing the deployment command:
 #### Install Frameworks
-Install the current <b>nodejs</b> and <b>serverless</b> frameworks; first, install <b>nodejs</b> by executing a command below:
+Install the latest version of <b>nodejs</b> and <b>serverless</b> frameworks; first, install <b>nodejs</b> by executing a command below:
 ```
 sudo yum install nodejs
 ```
@@ -46,18 +50,21 @@ and then, using the package manager to install <b>serverless</b>:
 npm install -g serverless
 ```
 #### Install AWS Command-Line Interface
-The service runs in AWS environment, and using AWS Command-Line Interface - aws cli to deploy the service to AWS. Make sure you have aws cli installed, and if not, follow general instructions found from the AWS documentation to have it installed. Ensure your user profile allowing you to deploy software packages to the AWS environment.
+The service runs in AWS environment, and <b>serverless</b> interacts with functions facilitated by AWS Command-Line Interface (aws cli) to deploy the service. Make sure you have <i>aws cli</i> installed, and if not, follow general instructions found from the AWS documentation for the installation. 
+
+Also, and more important, make sure that your user profile allowing you to deploy software packages to AWS environment.
 
 #### Prepare Source Code
-The source is stored in a remote repository in <i>github</i>. The simplest way to prepare the source code on your deployment platform is to use <i>git</i> to clone the source code on your local computer - the deployment platform, or you may manually copy files of the source code form <i>github</i> to your local computer.
+The source code is stored in a remote repository at <i>github</i>, and the simplest way to prepare the source code on your deployment platform is to use <i>git</i> to clone the source code and its file structure. Or you may manually copy files of the source code form <i>github</i> to your deployment platform.
 
-To clone the source code, making sure that you have <i>git</i> installed; if not, following the general instructions found on the internet to have it installed. Execute a command below to clone the source code:
+To clone the source code, making sure that you have <i>git</i> installed; if not, following the general instructions found on the internet for the installtion; and then, execute a command below to clone the source code:
 ```
 git clone https://github.com/stelligent/miniproject-ZHENG-JAMES
 ```
-To manually copy the files of the source code, make sure that you follow the same file structure, found in <i>github</i>:
+To manually prepare the source code instead of the clone, copy the files of the source code from the respository and make sure that all the files fall into a file structure below listed below, same as that in <i>github</i>:
 ```
-mini README.md
+README.md
+mini
   |__ .gitignore
       handler.py
       serverless.yml
@@ -65,21 +72,21 @@ mini README.md
 
 Now, it comes the final step to deploy the source code to AWS.
 
-Execute a command below to have the command prompt within the directory <i>mini</i>:
+Execute a command below to have the command prompt contained within the directory <i>mini</i>:
 ```
 cd mini
 ```
-and then execute a command to start the deployment process if the deployment platform has your user profile setup in aws cli:
+and then execute the deployment command mentioned before, to start the deployment process if your <i>aws cli</i> user profile is the default in the deployment platform:
 ```
 serverless deploy
 ```
-If your deployment platform has multiple profiles defined in aws cli, append your profile name to the command above. For example, if my profile name is <b>jz-aws-user</b>, execute the command:
+If your deployment platform has multiple profiles defined in <i>aws cli</i>, append your profile name to the command. For example, if my profile name is <b>jz-aws-user</b>, execute the command by appending the profile name:
 ```
 serverless deploy --aws-profile jz-aws-user
 ```
-After the command above executed, the <b>serverless</b> framework will automatically kick off the deployment process.
+The command above uses the <b>serverless</b> framework to kick off the deployment process that automatically promptes AWS to have everything setup the service needs to run.
 
-Upon success, you screen should have some information like this below:
+Upon the successful deployment, you screen should have some information displayed like this below:
 ```
 ..............................
 Serverless: Stack update finished...
@@ -98,15 +105,13 @@ layers:
    None
 ```
 ## Test and Run Service
-The instruction on testing and running the service is limited on LINUX operating system only.
-
-Basically, there are 2 types of test methods we use to test the service immediately after the deployment; testing in <b>serverless</b> and testing in <b>curl</b>.
+To test and run the service on LINUX operating system, there are 2 basic types of test methods we can use immediately after the deployment: testing in <b>serverless</b> and testing in <b>curl</b>.
 
 Testing in <b>serverless</b>, execute a command:
 ```
 serverless invoke -f mini
 ```
-To have some process information included by the testing result, execute a command:
+In this method, we can have some additional information obtained about the running process by appending a log option like this below:
 ```
 serverless invoke -f mini --log
 ```
@@ -115,14 +120,18 @@ Testing in <b>curl</b>, execute a command:
 curl -i -X GET https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini
 ```
 <b>NOTE:</b>
-The first part of the URL in the command <i>17j9kelj04</i> is the API identification. Your deployment will generate a different API identification. Referrer to the API URL listed under <i><b>endpoints</b></i>, described in section <b>Deploy Service to AWS</b>.
+The first part of the URL as displayed above, <i>17j9kelj04</i>, is the API identification. Your deployment should have that part different than the one displayed above. 
 
-To run the service, a user sends the URL that pointing to the service hosted by AWS API gateway, which further triggers off a function that captures the current time and creates the message back to the user.
+To get the URL containing the corrent API identification, referrer to the entry listed under <i><b>endpoints</b></i> from the information displayed on your screen after the successful deployment, described in section <b>Deploy Service to AWS</b>.
 
-In order to have the above running mechanism work, the deployment process packages the source code, including AWS CloudFormation and then uploads the package to AWS that automatically completes the tasks below, as software artifacts or building blocks for the service:
+To run the service in a URL as the RESTful API, a user sends the URL to the AWS host; and then it points to a function that further triggers off a logic process capturing the current time and creating the message as the result back for the user.
+
+In order to have the above running mechanism work, the deployment process packages the source code, including an AWS CloudFormation template and uploads the package to AWS, and the CloudFormation will be further executed by AWS to complete the tasks below:
 * Creating an entry at AWS API Gateway
 * Creating a Lambada function that registers itself to AWS API gateway
 * Creating a bucket in AWS S3 to expose the API in URL
+
+The AWS services created and provisioned above become the primary building blocks or software artifacts that make the service possible.
 
 The function that captures the current time and creates the message in Python:
 ```python
