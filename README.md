@@ -1,7 +1,7 @@
 # miniproject-ZHENG-JAMES
 This mini project is conducted by Stelligent as part of the interview process.<br />
 ### Quick Project Introduction: 
-The project deliverable is to provide a service other applications or users via an URL that displays a message with current time. The applications and users will use a simple URL to query the message, like this below:
+The project deliverable is a software product that provides a service to other applications or users via an URL, and displays a message with current time. The applications and users will use a simple URL to query the message, like this below:
 ```
 https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini
 ```
