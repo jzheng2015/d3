@@ -32,7 +32,8 @@ The project is designed and implemented in Python scripting language.
 
 ## Deploy Service to AWS
 The service deployment is in a single command line execution, like this below:
-``` serverless deploy
+```
+serverless deploy
 ```
 The deployment command above will launch the environment on AWS with all the necessary infrastructures provisioned automatically.
 
