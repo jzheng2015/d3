@@ -7,7 +7,7 @@ To use the service, applications and users use a simple URL to query the message
 ```
 https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini
 ```
-And the result from the the above service request is listed as below:
+And the result from the the above service request looks like below:
 ```
 {"message": "Automation for the People", "timestamp": "1545375371"}
 ```
