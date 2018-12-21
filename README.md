@@ -13,7 +13,7 @@ And the request above yields a result that looks like this below:
 ```
 The time displayed above is in a format of UNIX timestamp.
 
-Simply, a service that can be obtained in a URL request is so called Web Services or little more technical, a RESTful API.
+Simply, this service in URL is so called Web Services or little more technical, a RESTful API.
 
 ### Quick Test
 For a quick test for the service created by the mini project, click <a href="https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini" target="_blank" title="A quick view to the project deliverable at AWS">here</a>, or copy and paste the URL displayed above to your browser's URL input box.
