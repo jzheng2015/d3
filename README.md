@@ -1,6 +1,6 @@
 # miniproject-ZHENG-JAMES
 This mini project is conducted by Stelligent as part of the interview process.
-## Project Quick Introduction: 
+## Quick Overview: 
 The project deliverable is a software product, hosted on AWS, which provides a service to other applications or users via an URL request. The service provides a message with current time. 
 
 To use the service, send the URL in a web browser or applications programmed to use the URL like this below:
