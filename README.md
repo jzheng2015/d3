@@ -1,17 +1,19 @@
 # miniproject-ZHENG-JAMES
 This mini project is conducted by Stelligent as part of the interview process.
 ## Quick Project Introduction: 
-The project deliverable is a software product, hosted on AWS, which provides a service to other applications or users via an URL, and displays a message with current time. The applications and users will use a simple URL to query the message, like this below:
+The project deliverable is a software product, hosted on AWS, which provides a service to other applications or users via an URL. It displays a message with current time. 
+
+To use the service, applications and users use a simple URL to query the message, like this below:
 ```
 https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini
 ```
-And the result displayed on your screen will be:
+And the result from the the above service request is listed as below:
 ```
 {"message": "Automation for the People", "timestamp": "1545375371"}
 ```
 The time displayed is in a format of UNIX timestamp.
 
-Simply, a URL that provides a given service is so called Web Services, or a little more technical, RESTful API.
+Simply, the service obtained by sending a request in a URL is so called Web Services or little more technical, a RESTful API.
 
 ### Quick Test
 For a quick test for the service, click <a href="https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini" target="_blank" title="A quick view to the project deliverable at AWS">here</a>, or copy and paste the URL displayed above to your browser's URL input box.
@@ -117,7 +119,7 @@ The first part of the URL in the command <i>17j9kelj04</i> is the API identifica
 
 To run the service, a user sends the URL that pointing to the service hosted by AWS API gateway, which further triggers off a function that captures the current time and creates the message back to the user.
 
-In order to have the running mechanisms work as described above, the deployment process packages the source code, including AWS CloudFormation and then uploads the package to AWS that automatically completes the tasks below:
+In order to have the above running mechanism work, the deployment process packages the source code, including AWS CloudFormation and then uploads the package to AWS that automatically completes the tasks below, as software artifacts or building blocks for the service:
 * Creating an entry at AWS API Gateway
 * Creating a Lambada function that registers itself to AWS API gateway
 * Creating a bucket in AWS S3 to expose the API in URL
