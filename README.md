@@ -18,6 +18,8 @@ Simply, this service in URL is so called Web Services or little more technical, 
 ### Quick Test
 For a quick test for the service created by the mini project, click <a href="https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini" target="_blank" title="A quick view to the project deliverable at AWS">here</a>, or copy and paste the URL displayed above to your browser's URL input box.
 
+Notice the difference of the timestamps everytime you send the service request.
+
 ### Further Information
 Further information in this document, README.md, will be more technology oriented; it will provide instructional information of the project deployment, testing, and how some software artifacts help to run the service. It also includes instructions to cleanup the service from AWS' running environment, or uninstall the service from AWS.
 
