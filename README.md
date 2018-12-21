@@ -3,11 +3,11 @@ This mini project is conducted by Stelligent as part of the interview process.
 ## Project Quick Introduction: 
 The project deliverable is a software product, hosted on AWS, which provides a service to other applications or users via an URL. The service provides a message with current time. 
 
-To use the service, applications and users use a simple URL to query the message, like this below:
+To use the service, applications and users use a simple URL to query the message or request the service, like this below:
 ```
 https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini
 ```
-And the result from the the above service request looks like below:
+And the request above yields a result that looks like this below:
 ```
 {"message": "Automation for the People", "timestamp": "1545375371"}
 ```
