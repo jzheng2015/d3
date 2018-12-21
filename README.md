@@ -15,7 +15,7 @@ The time displayed in the result above is in a format of UNIX timestamp.
 
 Simply, this service in URL is so called Web Services or little more technical, a RESTful API.
 
-### Quick Test
+### Quick Test in Automation
 For a quick test of the service created by the mini project, click <a href="https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini" target="_blank" title="A quick view to the project deliverable at AWS">here</a>, or copy and paste the URL displayed above to your browser's URL input box.
 
 Notice the difference of the timestamps everytime you send the service request.
