@@ -137,7 +137,7 @@ The service running infrastructure includes the followins:
 
 All those AWS services as the service running infrastructure are considered as the software artifacts or building blocks in design, which constructe the service. Or simply, the AWS running environment.
 
-The AWS running environment is created and provisioned by <i>aws cli</a> in an AWS <b>CloudFormation</b> template. The template is created when <b>serverless</b> runs the deployment process and interacts with <i>aws cli</a>.
+The AWS running environment is created and provisioned by <i>aws cli</i> in an AWS <b>CloudFormation</b> template. The template is created when <b>serverless</b> runs the deployment process and interacts with <i>aws cli</i>.
 
 The code-base of the logics, that captures the current time and creates the message in Python:
 ```python
