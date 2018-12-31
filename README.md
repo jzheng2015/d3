@@ -25,7 +25,7 @@ Notice the difference of the timestamps on the message; it captures the moment w
 ### Further Information
 Further information in this document, README.md, will be more technical-oriented; it provides instructional information of the project deployment to AWS, testing, and how some software artifacts help to run the service. It also includes instructions to cleanup the service from AWS' running environment, or uninstall the service from AWS.
 
-The document divides its further content into following sections:
+The document divides its content further into following sections:
 * <b>Deploy Service to AWS</b>
 * <b>Test and Run Service</b>
 * <b>Cleanup Service from AWS</b>
