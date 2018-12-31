@@ -15,12 +15,12 @@ The time displayed in the result above is in a format of UNIX timestamp.
 
 Simply, this service in URL is so called Web Services or little more technical, a RESTful API.
 
-The service URL specified above, is also referred as the HTTP endpoint.
+The service URL specified above, is also referred to as the HTTP endpoint.
 
 ### Quick Test in Automation
 For a quick test of the service, click <a href="https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini" target="_blank" title="A quick view to the project deliverable at AWS">here</a>.
 
-Notice the difference of the timestamps on the message; it captures the moment when the request received by the servcie.
+Notice the difference of the timestamps on the message; it captures the moment when the request received by the service.
 
 ### Further Information
 Further information in this document, README.md, will be more technology oriented; it will provide instructional information of the project deployment, testing, and how some software artifacts help to run the service. It also includes instructions to cleanup the service from AWS' running environment, or uninstall the service from AWS.
