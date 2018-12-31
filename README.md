@@ -33,15 +33,15 @@ The document divides its content further into following sections:
 The project is designed and implemented in Python scripting language.
 
 ## Deploy Service to AWS
-The service deployment is in a single command line execution, like this below:
+The service deployment is in a single command line execution, like below:
 ```
 serverless deploy
 ```
-The deployment command above will launch the environment on AWS with all the necessary infrastructures provisioned automatically.
+The deployment command above will launch a service running environment on AWS with all the necessary infrastructures provisioned, automatically.
 
-<b>* DO NOT</b> execute the deployment command now, until all the deployment prerequsites satisfied on your local computer - the deployment platform.
+<b>* DO NOT</b> execute the deployment command now until all the deployment prerequsites satisfied on your local computer - the deployment platform.
 
-The prerequisites include a framework named <b>serverless</b> that automates the deployment process by packaging the source code and uploads it to AWS that further provisions service infrastructure and sets up the HTTP endpoint, automatically.
+The prerequisites include a framework named <b>serverless</b> that automates the deployment process by packaging the source code and uploads it to AWS that further provisions the service infrastructure and sets up the HTTP endpoint, automatically.
 
 Follow steps below to prepare the prerequisites and the source code on your deployment platform before executing the deployment command:
 #### Install Frameworks
@@ -77,15 +77,15 @@ mini
 Now, it comes the final step to deploy the source code to AWS.
 
 #### Execute Single Deployment Command
-First, change the directory at the command line to the repository, a file directory named <b>mini</b>:
+First, change the directory at the command line to the repository, named <b>mini</b>:
 ```
 cd mini
 ```
-and then, execute the deployment command as mentioned before:
+and then, execute the single deployment command as mentioned before, like below:
 ```
 serverless deploy
 ```
-The deployment command depends on your AWS user profile, configured by <i>aws cli</i>. If the defult profile used by <i>aws cli</i> is not allowed to deploy packages to AWS, you need to specify one that is allowed to do that. For example, if my profile name is <b>jz-aws-user</b>, execute the command by appending the profile name as one of the optinal command-line input parameters, like this below:
+The execution of the deployment command depends on your AWS user profile, configured by <i>aws cli</i>. If the defult profile used by <i>aws cli</i> is not allowed to deploy packages to AWS, you need to specify one that is allowed to do that. For example, if my profile name is <b>jz-aws-user</b>, execute the command by appending the profile name as one of the optinal command-line input parameters, like this below:
 ```
 serverless deploy --aws-profile jz-aws-user
 ```
@@ -135,11 +135,11 @@ The service running infrastructure includes the followins:
 * Lambada function, executing the logics capturing the time and creating the message
 * AWS S3, housing the actual URL and the code-base of the logics
 
-All those AWS services as the service running infrastructure are considered as the software artifacts or building blocks in design, which constructe the service. Or simply, the AWS running environment.
+All those AWS services are considered as part of the software artifacts or building blocks in design. Or simply, the AWS running environment for the service, the product of the mini project.
 
-The AWS running environment is created and provisioned by <i>aws cli</i> in an AWS <b>CloudFormation</b> template. The template is created when <b>serverless</b> runs the deployment process and interacts with <i>aws cli</i>.
+Those required AWS services are defined in a <b>CloudFormation</b> template that is created when serverless runs the deployment; it interacts with <i>aws cli</i> to provision the required AWS services as the infrastructue for the service (mini project).
 
-The code-base of the logics, that captures the current time and creates the message in Python:
+The code-base of the logics that capture the current time and creates the message in Python:
 ```python
 import json
 import time
