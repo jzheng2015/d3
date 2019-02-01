@@ -1,26 +1,22 @@
 # Serverless - Simple API Services in Python
-This mini project is conducted by Stelligent as part of the interview process.
+This mini project is created in Python scripting language, which provides a simple message service in RESTful API and serves as a proof of concept in workshops for knowledge transfers using AWS Serverless.
 ## Quick Overview: 
-The project deliverable is a software product, hosted on AWS, which provides a service to other applications or users via an URL request. The service provides a message with current time. 
+The project deliverable is a software product hosted on AWS serverless computing platform. It provides a simple message service in RESTful API - a service request via an URL from users, and the service returns a static message with the current time captured when a request received.
 
-To use the service, type the URL in a web browser's url input box, or program the URL into your application to request the service, like this below:
+The service URL:
 ```
 https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini
 ```
-The request above yields a result that looks like this:
+
+For a quick test in automation, click <a href="https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini" target="_blank" title="A quick view to the project deliverable at AWS">here</a> to send the URL to the service hosted in AWS.
+
+Your browser should display a messaeg that looks like the one below:
 ```
 {"message": "Automation for the People", "timestamp": "1545375371"}
 ```
-The time displayed in the result above is in a format of UNIX timestamp.
-
-Simply, this service in URL is so called Web Services or little more technical, a RESTful API.
+You can test it multiple times, and notice the tiemstamp differences; the timestamp is in a format of UNIX timestamp.
 
 The service URL specified above, is also referred to as the HTTP endpoint.
-
-### Quick Test in Automation
-For a quick test of the service, click <a href="https://17j9kelj04.execute-api.us-east-1.amazonaws.com/dev/mini" target="_blank" title="A quick view to the project deliverable at AWS">here</a>.
-
-Notice the difference of the timestamps on the message; it captures the moment when the request received by the service.
 
 ### Further Information
 Further information in this document, README.md, will be more technical-oriented; it provides instructional information of the project deployment to AWS, testing, and how some software artifacts help to run the service. It also includes instructions to cleanup the service from AWS' running environment, or uninstall the service from AWS.
