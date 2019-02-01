@@ -1,4 +1,4 @@
-# miniproject-ZHENG-JAMES
+# Serverless - Simple API Services in Python
 This mini project is conducted by Stelligent as part of the interview process.
 ## Quick Overview: 
 The project deliverable is a software product, hosted on AWS, which provides a service to other applications or users via an URL request. The service provides a message with current time. 
